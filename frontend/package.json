@@ -1,0 +1,21 @@
+{
+  "name": "hot-takes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "run-script-os",
+    "start:linux:darwin": "concurrently \"node ./node_modules/.bin/http-server -a localhost -p 8070\"  \"sleep 1 && open http://localhost:8070\"",
+    "start:win32": "node node_modules/live-server/live-server --port=8070"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.5.1",
+    "http-server": "^0.11.1",
+    "live-server": "^1.2.1",
+    "run-script-os": "^1.0.7"
+  }
+}
